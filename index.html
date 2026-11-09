@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StockFácil · Ferretería El Constructor</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f5f4a'/%3E%3Cpath d='M9 11h14v3H9zm0 5h14v3H9zm0 5h9v3H9z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<section id="login" class="login" hidden>
+  <form id="login-form" class="login-card" autocomplete="off">
+    <div class="brand brand-lg"><span class="logo" aria-hidden="true">SF</span><div><strong>StockFácil</strong><small>Ferretería El Constructor S.A.S.</small></div></div>
+    <h1>Iniciar sesión</h1>
+    <label>Usuario<input name="username" required autofocus></label>
+    <label>Contraseña<input name="password" type="password" required></label>
+    <p class="form-error" id="login-error" role="alert"></p>
+    <button class="btn primary block" type="submit">Entrar</button>
+    <details class="demo-users">
+      <summary>Usuarios de demostración</summary>
+      <table>
+        <tr><td>hrincon</td><td>admin123</td><td>Administrador</td></tr>
+        <tr><td>lcastro</td><td>caja123</td><td>Cajero</td></tr>
+        <tr><td>jpulido</td><td>bodega123</td><td>Bodeguero</td></tr>
+      </table>
+    </details>
+  </form>
+</section>
+
+<div id="app" class="app" hidden>
+  <aside class="sidebar">
+    <div class="brand"><span class="logo" aria-hidden="true">SF</span><div><strong>StockFácil</strong><small>El Constructor</small></div></div>
+    <nav id="nav"></nav>
+    <div class="sidebar-foot">
+      <div class="who"><strong id="who-name"></strong><small id="who-role"></small></div>
+      <button class="btn ghost block" id="logout" type="button">Cerrar sesión</button>
+    </div>
+  </aside>
+  <main>
+    <header class="topbar">
+      <h1 id="view-title"></h1>
+      <div class="topbar-right"><span id="today"></span><a href="#/alertas" class="alert-pill" id="alert-pill" hidden></a></div>
+    </header>
+    <div id="view" class="view"></div>
+  </main>
+</div>
+
+<dialog id="modal"><div id="modal-body"></div></dialog>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<div id="print-area"></div>
+
+<script src="js/core.js"></script>
+<script src="js/seed.js"></script>
+<script src="js/store.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
